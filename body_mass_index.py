@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-name = input("Ваше имя?\n")
-
-print("Привет, ", name, "!")
-
 age = int(input("Сколько Вам полных лет? "))
 
 height = float(input("Ваш рост? "))
