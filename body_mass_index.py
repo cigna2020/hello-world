@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-print("Ваше имя?")
 
-name = input()
+name = input("Ваше имя?\n")
 
 print("Привет, ", name, "!")
 
