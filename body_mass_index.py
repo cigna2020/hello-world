@@ -1,36 +1,42 @@
 # -*- coding: utf-8 -*-
 
-age = int(input("Сколько Вам полных лет? "))
-
-height = float(input("Ваш рост? "))
-
-weight = float(input("Ваш вес? "))
+age = int(input())
+height = float(input())
+weight = float(input())
 
 if age < 10 or height <= 0 or height > 3 or weight <= 0 or weight > 500:
-
     print("Ошибочные входные данные")
 
 else:
     bmi = weight / height ** 2
-
     bmi = round(bmi, 2)
 
-    print("Ваш индекс массы тела: ", str(bmi))
+    if age < 45:
+        if bmi < 18.5:
+            description = "недостаточной массой тела."
 
-    if bmi < 18.5:
+        elif 25 > bmi >= 18.5:
+            description = "нормальной массой тела."
 
-        description = "недостаточной массой тела."
+        elif bmi < 30:
+            description = "избыточной массой тела."
 
-    elif bmi < 25:
+        else:
+            description = "ожирением."
 
-        description = "нормальной массой тела."
+        print("bmi=", bmi, "Вы относитесь к группе людей с", description)
 
-    elif bmi < 30:
+    if age >= 45:
+        if bmi < 22:
+            description = "недостаточной массой тела."
 
-        description = "избыточной массой тела."
+        elif 27 > bmi >= 22:
+            description = "нормальной массой тела."
 
-    else:
+        elif 32 > bmi >= 27:
+            description = "избыточной массой тела."
 
-        description = "ожирением."
+        else:
+            description = "ожирением."
 
-    print("Вы относитесь к группе людей с", description)
+        print("bmi=", bmi, "Вы относитесь к группе людей с", description)
