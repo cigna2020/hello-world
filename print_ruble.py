@@ -1,1 +1,14 @@
-print('error' if 0 > ruble > 99 else 'рубль' if str(ruble)[-1] == 1 and str(ruble)[-1] != 11 else 'рубля' if str(ruble)[-1] == i in [2, 3, 4] and str(ruble)[-1] != i in [12, 13, 14] else 'рублей' for ruble in [int(input())])
+ruble = int(input())
+
+if ruble > 99 or ruble <= 0:
+    print('ошибка')
+elif str(ruble)[-1] == '1' and ruble != 11:
+    print(ruble, 'рубль')
+elif str(ruble)[-1] == '2' and ruble != '12':
+    print(ruble, 'рубля')
+elif str(ruble)[-1] == '3' and ruble != '13':
+    print(ruble, 'рубля')
+elif str(ruble)[-1] == '4' and ruble != '14':
+    print(ruble, 'рубля')
+else:
+    print(ruble, 'рублей')
