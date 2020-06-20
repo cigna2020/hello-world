@@ -1,0 +1,1 @@
+print('error' if 0 > ruble > 99 else 'рубль' if str(ruble)[-1] == 1 and str(ruble)[-1] != 11 else 'рубля' if str(ruble)[-1] == i in [2, 3, 4] and str(ruble)[-1] != i in [12, 13, 14] else 'рублей' for ruble in [int(input())])
