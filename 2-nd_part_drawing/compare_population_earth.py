@@ -24,24 +24,12 @@ error_list = [abs((populalion[i] - populalion_theory[i]) / populalion[i])
 for i in range(len(years))]
 
 
+index_min_error = error_list.index(min(error_list[a_range:b_range+1]))
+index_max_error = error_list.index(max(error_list[a_range:b_range+1]))
+min_year = years[index_min_error]
+max_year = years[index_max_error]
+evereg_error = sum(error_list[a_range:b_range+1])/len(error_list[a_range:b_range+1])*100
 
-print('min = ', min(error_list)*100, 'max = ', max(error_list), 'mean = ', (sum(error_list)/len(error_list))*100)
+print("Погрешность - минимальная, год: %4d, максимальная, год: %4d, средняя, процент: %6.3f" %(min_year, max_year, evereg_error))
 
 
-"Погрешность - минимальная, год: %4d, максимальная, год: %4d, средняя, процент: %6.3f"
-
-
-print("-" * 40)
-
-print("|%7s | %7s | %7s |%8s |" % ("1","2","exp(t)", "error"))
-
-print( "-" * 40)
-
-for i in range(len(years)):
-    print("| %7.3f | %7.3f | %7.0f |%7.3f%% |"
-          % (populalion[i], populalion_theory[i], years[i], error_list[i] * 100))
-
-print("-" * 40)
-
-# for z in years:
-#     print(("%5d - %6.3f миллиард(ов)" % (z, compute_population(z))))
