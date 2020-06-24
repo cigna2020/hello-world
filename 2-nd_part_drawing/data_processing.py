@@ -19,6 +19,8 @@ for line in file:
 
 file.close()
 
+
+
 lambda_list = [compute_lambda(t) for t in t_list]
 
 error_list = [abs((lambda_exp_list[i] - lambda_list[i]) /
