@@ -12,7 +12,7 @@ ax = plt.gca()
 figure_w = Wedge((3, 1), 2, 45, 135) # рисуем сектор (центр, радиус, углы)
 ax.add_patch(figure_w)
 
-figure_a = Arc((3, 1), 6, 6, 135, 270, lw=3)
+figure_a = Arc((3, 1), 6, 6, 0, 45, 135, lw=3)
 ax.add_patch(figure_a)
 
 plt.grid()
