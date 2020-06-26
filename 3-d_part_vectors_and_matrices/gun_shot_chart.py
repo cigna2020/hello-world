@@ -43,4 +43,8 @@ plt.gca().spines["right"].set_visible(False)
 
 plt.legend(loc="lower center")
 
+
+plt.plot([x_target], [h_target], 'b+', markersize = 12)
+
+
 plt.show()
