@@ -16,3 +16,9 @@ print("Общее время в пути : ", round(sum_time, 2))
 
 avg_speed = len_path / sum_time
 print("Средняя скорость : ", round(avg_speed, 2))
+
+max_time = time.max()
+
+max_path = np.where(time == max_time)[0]
+
+print("Участки, на проезд по которым потрачено больше всего времени :", max_path)
