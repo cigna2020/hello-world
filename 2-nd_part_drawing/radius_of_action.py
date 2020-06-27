@@ -1,6 +1,6 @@
-x = input()
-y = input()
-numb = int(input())
+x = input() #координаты населенных пунктов по оси OX
+y = input() # координаты населенных пунктов по оси OY
+numb = int(input()) # номер населенного пункта k
 radius = int(input())
 
 x, y = x.split(), y.split()

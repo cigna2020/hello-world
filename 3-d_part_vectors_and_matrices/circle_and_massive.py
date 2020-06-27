@@ -3,33 +3,34 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
 
 
-points_number = int(input())
-points = []
+points_number = 4 #int(input())
+
+point = [[10.1, 14.0], [5.1, 8.5], [13.3, -3.9], [-15.8, 12.9]]
+# point = []
+#
+# for i in range(points_number):
+#     i = str(input())
+#     y = i.split()
+#     point.append(y)
+
+points = np.array(point, dtype=float)
+
+O_x = np.mean(points[:, 0])
+O_y = np.mean(points[:, 1])
+O_xy = np.mean(points, 0)
 
 
+distance = [((float(O_xy[0]) - float(points[i, 0])) ** 2 + (float(O_xy[1]) - float(points[i, 1])) ** 2) ** 0.5 for i in range(0, points_number)]
 
-for i in range(points_number):
-    i = str(input())
-    y = i.split()
-    print(y[0], type(y))
-    points.append(y)
-
-ar_p = np.array(points, dtype=float)
-
-# for i in range(len(points)):
-#     points_2.append(points[y])
-#     y += 1
-
-
-print(points)
-print(ar_p)
-
+r = distance[3]
+# print(distance)
+# print(points)
+# # print("О(%6.3f, %6.3f)" %(O_x, O_y))
 
 # r = np.sqrt((x - a) ** 2 + (y - b) ** 2)
-# O_x = np.mean(points[:, 0])
-# O_y = np.mean(points[:, 1])
-# O_xy = np.mean(points,0)
 #
+print("О(%6.3f, %6.3f), r = %6.3f" %(O_x, O_y, r))
+
 # plt.xlim(-30, 30)
 # plt.ylim(-30, 30)
 # ax = plt.gca()
@@ -44,3 +45,5 @@ print(ar_p)
 #
 # plt.plot(points[:,0], points[:,1], 'go')
 # plt.show()
+
+
