@@ -4,23 +4,25 @@ from matplotlib.patches import Circle
 
 
 points_number = int(input())
-point = []
+points = []
 
 
 
 for i in range(points_number):
-    i = input().split()
-    point.append(i)
+    i = str(input())
+    y = i.split()
+    print(y[0], type(y))
+    points.append(y)
 
-
+ar_p = np.array(points, dtype=float)
 
 # for i in range(len(points)):
 #     points_2.append(points[y])
 #     y += 1
 
 
-print(point)
-print(points_2)
+print(points)
+print(ar_p)
 
 
 # r = np.sqrt((x - a) ** 2 + (y - b) ** 2)

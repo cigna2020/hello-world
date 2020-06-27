@@ -1,14 +1,19 @@
 import numpy as np
 import matplotlib as mt
 
-points_count = 3 #int(input())
-point_1 = np.array([-7, -8]) #np.array(input().split(), dtype=float)
-point_2 = np.array([-11, 4]) #np.array(input().split(), dtype=float)
-point_3 = np.array([-9, 5]) #np.array(input().split(), dtype=float)
-angle = 45 #int(input())
+points_count = int(input())
+points = []
+
+for i in range(points_count):
+    i = str(input())
+    y = i.split()
+    points.append(y)
+
+angle = int(input())
 angle = np.radians(angle)
 
-massive = np.array([point_1, point_2, point_3])
+
+massive = np.array(points, dtype=float)
 
 rotate = np.array([[np.cos(angle), np.sin(angle)], [np.sin(angle)*-1, np.cos(angle)]])
 
